@@ -11,6 +11,10 @@ document.querySelectorAll(".item").forEach(n => n.addEventListener("click", () =
     menu.classList.remove("active");
 }))
 
+document.querySelectorAll('.current-year').forEach((yearElement) => {
+    yearElement.textContent = new Date().getFullYear();
+});
+
 function isSafari() {
   return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 }
@@ -53,7 +57,3 @@ function pageEmail() {
 function pageLocation() {
     window.open("https://www.google.com/maps/place/Seattle,+WA");
 }
-
-document.querySelectorAll('.current-year').forEach((yearElement) => {
-    yearElement.textContent = new Date().getFullYear();
-});
