@@ -290,7 +290,9 @@ button:focus-visible {
 }
 
 .menu .item:hover,
-.menu .item:focus-visible {
+.menu .item:focus-visible,
+.menu .item:visited:hover,
+.menu .item:visited:focus-visible {
     color: #AEE155;
     text-decoration: none;
     cursor: pointer;
@@ -299,19 +301,6 @@ button:focus-visible {
 
 .menu .item:visited {
     color: #4285F4;
-}
-
-.menu .item[href="./jobs"]:hover,
-.menu .item[href="./jobs"]:focus-visible {
-    color: #AEE155;
-    text-decoration: none;
-    cursor: pointer;
-    transform: translateY(-0.08rem);
-}
-
-.menu .item[href="./contact"]:hover,
-.menu .item[href="./contact"]:focus-visible {
-    color: #AEE155;
 }
 
 .menu a:active {
@@ -754,7 +743,9 @@ button:focus-visible {
     }
 
     .menu .item:hover,
-    .menu .item:focus-visible {
+    .menu .item:focus-visible,
+    .menu .item:visited:hover,
+    .menu .item:visited:focus-visible {
         color: #AEE155;
         text-decoration: none;
         transform: translateY(-0.08rem);
