@@ -78,6 +78,50 @@ body::-webkit-scrollbar {
     background-clip: content-box;
 }
 
+button,
+.processButton,
+.contactBoxes,
+.footerImage,
+.couponAccordian label {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+button,
+.logoButton,
+.logoButton a,
+.menu a,
+.menu a:hover,
+.menu a:focus-visible,
+.processButton a,
+.processButton a:hover,
+.processButton a:focus-visible {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+}
+
+button:hover,
+button:focus-visible {
+    transform: translateY(-0.15rem) scale(1.02);
+    box-shadow: 0 0.4rem 0.75rem rgba(0, 73, 148, 0.2);
+}
+
+.processButton:hover,
+.processButton:focus-visible,
+.contactBoxes:hover,
+.contactBoxes:focus-visible,
+.couponAccordian label:hover,
+.couponAccordian label:focus-visible {
+    transform: translateY(-0.15rem) scale(1.02);
+    box-shadow: 0 0.4rem 0.75rem rgba(0, 73, 148, 0.2);
+}
+
+.footerImage:hover,
+.footerImage:focus-visible {
+    transform: translateY(-0.1rem) scale(1.01);
+    box-shadow: none;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -93,10 +137,36 @@ body::-webkit-scrollbar {
     appearance: none;
     background-color: inherit;
     width: 27rem;
+    box-shadow: none;
+    padding: 0;
+}
+
+.logoButton:hover,
+.logoButton:focus-visible {
+    transform: translateY(-0.1rem) scale(1.01);
+    box-shadow: none;
+}
+
+.logoButton:focus,
+.logoButton:active,
+.menu .item:focus,
+.menu .item:active,
+.footerImage:focus,
+.footerImage:active,
+.processText .processButton:focus,
+.processText .processButton:active {
+    outline: none;
 }
 
 .logoImage {
     width: 27rem;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.logoButton:hover .logoImage,
+.logoButton:focus-visible .logoImage {
+    transform: scale(1.01);
 }
 
 .menu {
@@ -173,6 +243,25 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+.processText .processButton:hover,
+.processText .processButton:focus-visible {
+    transform: translate(-50%, calc(-50% - 0.25rem)) scale(1.03);
+    box-shadow: 0 0.45rem 0.85rem rgba(0, 73, 148, 0.22);
+}
+
+.processButton .text {
+    display: inline-block;
+    color: #F2F2F2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.processButton:hover .text,
+.processButton:focus-visible .text {
+    color: #AEE155 !important;
+    text-decoration: none;
+}
+
 .footerImage {
     width: 7rem;
     height: 7rem;
@@ -180,26 +269,49 @@ body::-webkit-scrollbar {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footerImage:hover,
+.footerImage:focus-visible {
+    transform: translateY(-0.1rem) scale(1.01);
+    box-shadow: none;
 }
 
 .footer {
     margin-top: 2rem;
 }
 
-.menu a:link {
+.menu .item {
     color: #4285F4;
     text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.menu a:visited {
-    color: #4285F4;
-    text-decoration: none;
-}
-
-.menu a:hover {
+.menu .item:hover,
+.menu .item:focus-visible {
     color: #AEE155;
     text-decoration: none;
     cursor: pointer;
+    transform: translateY(-0.08rem);
+}
+
+.menu .item:visited {
+    color: #4285F4;
+}
+
+.menu .item[href="./jobs"]:hover,
+.menu .item[href="./jobs"]:focus-visible {
+    color: #AEE155;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translateY(-0.08rem);
+}
+
+.menu .item[href="./contact"]:hover,
+.menu .item[href="./contact"]:focus-visible {
+    color: #AEE155;
 }
 
 .menu a:active {
@@ -207,11 +319,7 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
-.processBox .text:link {
-    color: #F2F2F2;
-    text-decoration: none;
-}
-
+.processBox .text:link,
 .processBox .text:visited {
     color: #F2F2F2;
     text-decoration: none;
@@ -639,24 +747,21 @@ body::-webkit-scrollbar {
         flex-direction: column;
     }
 
-    .menu a:link {
+    .menu .item {
         color: #F2F2F2;
         text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
     }
 
-    .menu a:visited {
-        color: #F2F2F2;
-        text-decoration: none;
-    }
-
-    .menu a:hover {
+    .menu .item:hover,
+    .menu .item:focus-visible {
         color: #AEE155;
         text-decoration: none;
+        transform: translateY(-0.08rem);
     }
 
-    .menu a:active {
+    .menu .item:visited {
         color: #F2F2F2;
-        text-decoration: none;
     }
 
     .processBox {
